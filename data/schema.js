@@ -12,12 +12,11 @@ import {
   connectionDefinitions,
   connectionFromArray,
   cursorForObjectInConnection,
-  fromGlobalId,
-  globalIdField,
   mutationWithClientMutationId,
   nodeDefinitions,
 } from 'graphql-relay';
 
+import { fromGlobalId, globalIdField } from './utils';
 import {
   URLEntry,
   addURL,

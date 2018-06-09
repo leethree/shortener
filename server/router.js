@@ -1,8 +1,8 @@
 /* @flow */
 
 import express from 'express';
-import { fromGlobalId } from 'graphql-relay';
 
+import { fromGlobalId } from '../data/utils';
 import { getURL } from '../data/database';
 
 // From URL object from relay ID

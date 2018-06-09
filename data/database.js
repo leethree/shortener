@@ -4,7 +4,7 @@ export class URLEntry {}
 export class User {}
 
 // Mock authenticated ID
-const VIEWER_ID = 'me';
+const VIEWER_ID = 1;
 
 // Mock user data
 const viewer = new User();
@@ -23,7 +23,7 @@ let nextId = 123;
 export const addURL = (url: string) => {
   const entry = new URLEntry();
   nextId += 1;
-  entry.id = `${nextId}`;
+  entry.id = nextId;
   entry.url = url;
   urlHashes[entry.id] = entry;
   urlIdsByUser[VIEWER_ID].push(entry.id);
