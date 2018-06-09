@@ -32,8 +32,7 @@ export const addURL = (url: string) => {
 
 export const getURL = (id: string) => urlHashes[id];
 
-export const getURLs = (userId: string) =>
-  urlIdsByUser[userId].map(id => urlHashes[id]);
+export const getURLs = () => urlIdsByUser[VIEWER_ID].map(id => urlHashes[id]);
 
 export function getUser(id) {
   return usersById[id];

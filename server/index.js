@@ -7,6 +7,7 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 
 import schema from '../data/schema';
+import router from './router';
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 const APP_PORT = 3000;
@@ -48,6 +49,9 @@ app.use(
     pretty: true,
   }),
 );
+
+// Setup redirection
+app.use(router);
 
 app.listen(APP_PORT, () => {
   console.log(`App is now running on http://localhost:${APP_PORT}`);

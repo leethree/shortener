@@ -120,8 +120,8 @@ const GraphQLShortenURLMutation = mutationWithClientMutationId({
     },
   },
   mutateAndGetPayload: ({ url }) => {
-    const localURLId = addURL(url);
-    return { localURLId };
+    const localId = addURL(url);
+    return { localId };
   },
 });
 
