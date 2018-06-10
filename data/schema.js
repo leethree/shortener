@@ -10,8 +10,8 @@ import {
 import {
   connectionArgs,
   connectionDefinitions,
-  connectionFromArray,
-  cursorForObjectInConnection,
+  connectionFromPromisedArray,
+  offsetToCursor,
   mutationWithClientMutationId,
   nodeDefinitions,
 } from 'graphql-relay';
@@ -22,13 +22,14 @@ import {
   addURL,
   getURL,
   getURLs,
+  getNumberOfURLs,
   User,
   getUser,
   getViewer,
 } from './database';
 
 const { nodeInterface, nodeField } = nodeDefinitions(
-  globalId => {
+  async globalId => {
     const { type, id } = fromGlobalId(globalId);
     if (type === 'URL') {
       return getURL(id);
@@ -74,11 +75,12 @@ const GraphQLUser = new GraphQLObjectType({
     urls: {
       type: URLsConnection,
       args: connectionArgs,
-      resolve: (obj, args) => connectionFromArray(getURLs(obj.id), args),
+      resolve: (obj, args) =>
+        connectionFromPromisedArray(getURLs(obj.id), args),
     },
     totalCount: {
       type: GraphQLInt,
-      resolve: () => getURLs().length,
+      resolve: () => getNumberOfURLs(),
     },
   },
   interfaces: [nodeInterface],
@@ -105,23 +107,17 @@ const GraphQLShortenURLMutation = mutationWithClientMutationId({
   outputFields: {
     urlEdge: {
       type: GraphQLURLEdge,
-      resolve: ({ localId }) => {
-        const url = getURL(localId);
-        return {
-          cursor: cursorForObjectInConnection(getURLs(), url),
-          node: url,
-        };
-      },
+      resolve: async (url: URLEntry) => ({
+        cursor: offsetToCursor(url.id),
+        node: url,
+      }),
     },
     viewer: {
       type: GraphQLUser,
       resolve: () => getViewer(),
     },
   },
-  mutateAndGetPayload: ({ url }) => {
-    const localId = addURL(url);
-    return { localId };
-  },
+  mutateAndGetPayload: async ({ url }) => addURL(url),
 });
 
 const Mutation = new GraphQLObjectType({
