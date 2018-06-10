@@ -17,16 +17,16 @@ import {
 } from 'graphql-relay';
 
 import { fromGlobalId, globalIdField } from './utils';
+import { URLEntry, User } from './types';
 import {
-  URLEntry,
   addURL,
   getURL,
   getURLs,
   getNumberOfURLs,
-  User,
   getUser,
   getViewer,
 } from './database';
+import { shortenURL } from './logic';
 
 const { nodeInterface, nodeField } = nodeDefinitions(
   async globalId => {
@@ -117,7 +117,7 @@ const GraphQLShortenURLMutation = mutationWithClientMutationId({
       resolve: () => getViewer(),
     },
   },
-  mutateAndGetPayload: async ({ url }) => addURL(url),
+  mutateAndGetPayload: async ({ url }) => shortenURL(url),
 });
 
 const Mutation = new GraphQLObjectType({
