@@ -5,6 +5,7 @@
   "scripts": {
     "start": "babel-node ./server/index.js",
     "build": "relay-compiler --src ./js/ --schema ./data/schema.graphql",
+    "test": "jest",
     "update-schema": "babel-node ./scripts/updateSchema.js"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-relay": "^1.6.0",
     "babel-plugin-transform-runtime": "^6.12.0",
@@ -47,6 +49,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
+    "jest": "^23.1.0",
     "prettier": "^1.13.4",
     "relay-compiler": "1.6.0"
   }

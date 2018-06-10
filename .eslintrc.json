@@ -1,12 +1,14 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "parser": "babel-eslint",
   "extends": [
     "airbnb",
     "plugin:flowtype/recommended",
+    "plugin:jest/recommended",
     "prettier",
     "prettier/flowtype",
     "prettier/react"
