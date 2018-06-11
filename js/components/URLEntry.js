@@ -13,7 +13,7 @@ const URLEntry = ({ url }: Props) => {
   const href = `/${url.id}`;
   return (
     <Card my={8} color="#555555">
-      <Row px={8}>
+      <Row px={8} alignItems="center">
         <Column my={8} flex="1 1 auto">
           {url.url}
         </Column>
