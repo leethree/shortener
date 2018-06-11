@@ -41,3 +41,7 @@ The local server can be accessed at <http://localhost:3000> by default.
 ## Todos
 
 WORK IN PROGRESS
+
+## License
+
+[MIT © Sirui Li](LICENSE.md)
