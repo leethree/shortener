@@ -1,0 +1,15 @@
+[ignore]
+; Ignore unexpected extra "@providesModule"
+.*/node_modules/.*/node_modules/fbjs/.*
+; Ignore tests
+.*/__tests__/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

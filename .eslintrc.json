@@ -30,8 +30,9 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": "error",
     "no-use-before-define": "off",
+    "camelcase": "off",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
   }
 }

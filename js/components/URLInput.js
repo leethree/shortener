@@ -34,7 +34,7 @@ class URLInput extends React.Component<Props, State> {
 
   commitChanges = async () => {
     const newText = this.state.text.trim();
-    if (newText !== '') {
+    if (newText !== '' && this.props.onSave) {
       try {
         await this.props.onSave(newText);
         this.setState({ text: '' });
@@ -49,10 +49,10 @@ class URLInput extends React.Component<Props, State> {
       this.commitChanges();
     }
   };
-  handleChange = e => {
+  handleChange = (e: SyntheticInputEvent<HTMLInputElement>) => {
     this.setState({ text: e.target.value, error: '' });
   };
-  handleKeyDown = e => {
+  handleKeyDown = (e: KeyboardEvent) => {
     if (e.keyCode === ENTER_KEY_CODE) {
       this.commitChanges();
     }

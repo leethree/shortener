@@ -1,17 +1,23 @@
 /* @flow */
 
 import React from 'react';
-import { createFragmentContainer, graphql } from 'react-relay';
+import { createFragmentContainer, graphql, type RelayProp } from 'react-relay';
 import { Panel, Box, Label } from 'rebass';
 
 import ShortenURLMutation from '../mutations/ShortenURLMutation';
 import URLList from './URLList';
 import URLCount from './URLCount';
 import URLInput from './URLInput';
+import { type AppHome_viewer } from './__generated__/AppHome_viewer.graphql';
 
-const AppHome = ({ viewer, relay }) => {
+type Props = {
+  relay: RelayProp,
+  viewer: AppHome_viewer,
+};
+
+const AppHome = ({ viewer, relay }: Props) => {
   const handleInputSave = text =>
-    ShortenURLMutation.commit(relay.environment, text, viewer);
+    ShortenURLMutation.commit(relay.environment, text, viewer.id);
 
   return (
     <Panel color="blue">

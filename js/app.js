@@ -10,6 +10,9 @@ import AppHome from './components/AppHome';
 import Loading from './components/Loading';
 
 const mount = document.getElementById('root');
+if (mount == null) {
+  throw new Error('No root element for React');
+}
 
 const appQuery = graphql`
   query appQuery {

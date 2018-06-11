@@ -34,7 +34,7 @@ const usersById = {
 };
 
 export const addURL = async (url: string): Promise<URLEntry> => {
-  const entry: URLEntry = {
+  const entry = {
     url,
     userId: VIEWER_ID,
     _id: await getAutoincrementId(),
@@ -83,6 +83,6 @@ export const getNumberOfURLs = (): Promise<number> =>
     });
   });
 
-export const getUser = id => usersById[id];
+export const getUser = (id: number) => usersById[id];
 
 export const getViewer = () => getUser(VIEWER_ID);

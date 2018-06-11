@@ -74,8 +74,7 @@ const GraphQLUser = new GraphQLObjectType({
     urls: {
       type: URLsConnection,
       args: connectionArgs,
-      resolve: (obj, args) =>
-        connectionFromPromisedArray(getURLs(obj.id), args),
+      resolve: (obj, args) => connectionFromPromisedArray(getURLs(), args),
     },
     totalCount: {
       type: GraphQLInt,

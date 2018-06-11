@@ -3,8 +3,13 @@
 import React from 'react';
 import { createFragmentContainer, graphql } from 'react-relay';
 import { Card, Row, Column, Link, Pre } from 'rebass';
+import { type URLEntry_url } from './__generated__/URLEntry_url.graphql';
 
-const URLEntry = ({ url }) => {
+type Props = {
+  url: URLEntry_url,
+};
+
+const URLEntry = ({ url }: Props) => {
   const href = `/${url.id}`;
   return (
     <Card my={8} color="#555555">
