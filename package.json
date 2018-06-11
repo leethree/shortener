@@ -5,6 +5,7 @@
   "scripts": {
     "start": "babel-node ./server/index.js",
     "build": "relay-compiler --src ./js/ --schema ./data/schema.graphql",
+    "lint": "eslint .",
     "test": "jest",
     "update-schema": "babel-node ./scripts/updateSchema.js"
   },
@@ -16,6 +17,7 @@
     "graphql": "^0.13.2",
     "graphql-relay": "^0.5.5",
     "hashids": "^1.1.4",
+    "minimal-logger": "^0.4.1",
     "nedb": "^1.8.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

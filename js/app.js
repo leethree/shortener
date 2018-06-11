@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { QueryRenderer, graphql } from 'react-relay';
 import { Provider, Container } from 'rebass';
+import logger from 'minimal-logger';
 
 import environment from './environment';
 import AppHome from './components/AppHome';
@@ -31,7 +32,7 @@ const App = () => (
         variables={{}}
         render={({ error, props }) => {
           if (error) {
-            console.error(error);
+            logger.error(error);
           }
           if (props) {
             return <AppHome {...props} />;

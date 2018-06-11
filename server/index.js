@@ -5,6 +5,7 @@ import graphQLHTTP from 'express-graphql';
 import path from 'path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
+import logger from 'minimal-logger';
 
 import schema from '../data/schema';
 import router from './router';
@@ -53,6 +54,6 @@ app.use(
 // Setup redirection
 app.use(router);
 
-app.listen(APP_PORT, () => {
-  console.log(`App is now running on http://localhost:${APP_PORT}`);
+app.listen(APP_PORT, 'localhost', () => {
+  logger.info(`App is now running on http://localhost:${APP_PORT}`);
 });

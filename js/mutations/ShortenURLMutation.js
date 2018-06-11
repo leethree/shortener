@@ -47,9 +47,7 @@ const commit = (environment: Environment, url: string, userId: string) =>
       ],
       onCompleted: (response: ?Object, errors: ?Array<Error>) => {
         if (errors) {
-          // Extract the first error message
-          const { message } = errors[0];
-          console.error(message || 'An error has occured.');
+          // Extract the first error
           reject(errors[0]);
         } else {
           resolve(response);

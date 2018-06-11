@@ -13,7 +13,6 @@ export const shortenURL = async (input: string) => {
     const url = new URL(input);
     return addURL(url.href);
   } catch (err) {
-    console.error(err);
     throw new InvalidInputError(`${input} is not valid URL`);
   }
 };

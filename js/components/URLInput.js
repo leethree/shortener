@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Flex, Input, Button, Small } from 'rebass';
+import logger from 'minimal-logger';
 
 const ENTER_KEY_CODE = 13;
 
@@ -39,7 +40,7 @@ class URLInput extends React.Component<Props, State> {
         await this.props.onSave(newText);
         this.setState({ text: '' });
       } catch (err) {
-        console.error(err);
+        logger.error(err);
         this.setState({ error: err.message });
       }
     }

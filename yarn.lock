@@ -4587,6 +4587,10 @@ mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
 
+minimal-logger@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/minimal-logger/-/minimal-logger-0.4.1.tgz#59051f94da8c55a1c82acb8b5786586c822af5a9"
+
 minimalistic-assert@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
