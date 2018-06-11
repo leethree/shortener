@@ -19,7 +19,6 @@ import {
 import { fromGlobalId, globalIdField } from './utils';
 import { URLEntry, User } from './types';
 import {
-  addURL,
   getURL,
   getURLs,
   getNumberOfURLs,

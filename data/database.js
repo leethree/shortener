@@ -83,10 +83,6 @@ export const getNumberOfURLs = (): Promise<number> =>
     });
   });
 
-export function getUser(id) {
-  return usersById[id];
-}
+export const getUser = id => usersById[id];
 
-export function getViewer() {
-  return getUser(VIEWER_ID);
-}
+export const getViewer = () => getUser(VIEWER_ID);
