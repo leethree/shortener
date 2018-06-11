@@ -1,6 +1,7 @@
 /* @flow */
 
 import { commitMutation, graphql, type Environment } from 'react-relay';
+import uuidv4 from 'uuid/v4';
 
 const mutation = graphql`
   mutation ShortenURLMutation($input: ShortenURLInput!) {
@@ -21,9 +22,6 @@ const mutation = graphql`
   }
 `;
 
-// TODO: use UUID as clientMutationId
-let tempID = 0;
-
 const commit = (environment: Environment, url: string, userId: string) =>
   new Promise((resolve, reject) => {
     commitMutation(environment, {
@@ -31,7 +29,7 @@ const commit = (environment: Environment, url: string, userId: string) =>
       variables: {
         input: {
           url,
-          clientMutationId: tempID++,
+          clientMutationId: uuidv4(),
         },
       },
       configs: [
