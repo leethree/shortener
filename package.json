@@ -1,10 +1,11 @@
 {
   "name": "shortener",
   "version": "0.1.0",
+  "author": "Sirui Li",
   "private": true,
   "scripts": {
     "start": "babel-node ./server/index.js",
-    "build": "relay-compiler --src ./js/ --schema ./data/schema.graphql",
+    "compile": "relay-compiler --src ./js/ --schema ./data/schema.graphql",
     "lint": "eslint .",
     "test": "jest",
     "update-schema": "babel-node ./scripts/updateSchema.js"
