@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { createFragmentContainer, graphql } from 'react-relay';
-import { Card, Row, Column, Link, Pre } from 'rebass';
+import { Card, Row, Column, Link, Pre, Truncate } from 'rebass';
 import { type URLEntry_url } from './__generated__/URLEntry_url.graphql';
 
 type Props = {
@@ -14,7 +14,7 @@ const URLEntry = ({ url }: Props) => {
   return (
     <Card my={8} color="#555555">
       <Row px={8} alignItems="center">
-        <Column my={8} flex="1 1 auto">
+        <Column is={Truncate} my={8} flex="1 1 auto" title={url.url}>
           {url.url}
         </Column>
         <Column my={8} flex="0 1 auto">
