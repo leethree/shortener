@@ -2,6 +2,8 @@
 
 > An example app of Relay Modern and others
 
+![Screenshot](.github/screenshot.png)
+
 ## Frameworks
 
 - Framework: [Relay](https://facebook.github.io/relay/)
@@ -69,6 +71,8 @@ Start server in production mode:
 NODE_ENV=production yarn serve
 ```
 
+The server can be accessed at <http://localhost:3000>.
+
 ## Lint and Testing
 
 Run ESLint:
@@ -89,13 +93,32 @@ Run unit tests:
 yarn test
 ```
 
+## Folder Structure
+
+    .
+    ├── dist                    # Compiled files
+    ├── public                  # Static asset files
+    ├── src                     # Source files
+    │   ├── client              # Code for web app
+    │   ├── data                # Code for database and GraphQL schema
+    │   └── server              # Code for server
+    ├── tools                   # Scripts and utilities
+    ├── package.json
+    └── README.md
+
+## Limitations
+
+- There is no user authentication.
+- The UI currently only displays 10 shortened URLs (no pagination).
+- No other metadata is saved except for the URL.
+
 ## TODOs
 
 - [ ] Persist database in file system.
 - [ ] Setup environmental configs.
 - [ ] Add testing for GraphQL server.
 - [ ] Add testing for React components.
-- [ ] Duplicated URL detection.
+- [ ] Detect duplicated URLs.
 
 ## License
 
