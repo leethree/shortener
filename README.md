@@ -2,7 +2,7 @@
 
 > An example app of Relay Modern and others
 
-![Screenshot](.github/screenshot.png)
+<img src=".github/screenshot.png" alt="Screenshot" width="500">
 
 ## Frameworks
 
