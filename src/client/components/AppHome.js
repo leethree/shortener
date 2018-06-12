@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { createFragmentContainer, graphql, type RelayProp } from 'react-relay';
-import { Panel, Box, Label } from 'rebass';
+import { Panel, Box, Label, Small, Link } from 'rebass';
 
 import ShortenURLMutation from '../mutations/ShortenURLMutation';
 import URLList from './URLList';
@@ -20,19 +20,26 @@ const AppHome = ({ viewer, relay }: Props) => {
     ShortenURLMutation.commit(relay.environment, text, viewer.id);
 
   return (
-    <Panel color="blue">
-      <Panel.Header p={16} color="white" bg="blue">
-        URL Shortener
-      </Panel.Header>
-      <Box p={16}>
-        <Label>Enter URL:</Label>
-        <URLInput autoFocus onSave={handleInputSave} placeholder="https://" />
-        <URLList viewer={viewer} />
-      </Box>
-      <Panel.Footer p={16} color="blue">
-        <URLCount viewer={viewer} />
-      </Panel.Footer>
-    </Panel>
+    <React.Fragment>
+      <Panel color="blue">
+        <Panel.Header p={16} color="white" bg="blue">
+          URL Shortener
+        </Panel.Header>
+        <Box p={16}>
+          <Label>Enter URL:</Label>
+          <URLInput autoFocus onSave={handleInputSave} placeholder="https://" />
+          <URLList viewer={viewer} />
+        </Box>
+        <Panel.Footer p={16} color="blue">
+          <URLCount viewer={viewer} />
+        </Panel.Footer>
+      </Panel>
+      <Small>
+        <Link href="https://github.com/leethree/shortener" target="_blank">
+          GitHub
+        </Link>
+      </Small>
+    </React.Fragment>
   );
 };
 
