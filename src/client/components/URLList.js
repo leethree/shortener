@@ -25,7 +25,7 @@ const URLList = ({ viewer }: Props) => {
   return (
     <Box mt={16}>
       <Divider />
-      {edges.map(renderEdge)}
+      {edges.slice(0, 10).map(renderEdge)}
     </Box>
   );
 };

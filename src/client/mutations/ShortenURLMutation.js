@@ -39,7 +39,7 @@ const commit = (environment: Environment, url: string, userId: string) =>
           connectionInfo: [
             {
               key: 'URLList_urls',
-              rangeBehavior: 'append',
+              rangeBehavior: 'prepend',
             },
           ],
           edgeName: 'urlEdge',

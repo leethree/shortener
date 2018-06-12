@@ -61,15 +61,18 @@ export const getURL = (id: number): Promise<URLEntry> =>
     });
   });
 
-export const getURLs = (): Promise<Array<URLEntry>> =>
+export const getURLs = (limit: number): Promise<Array<URLEntry>> =>
   new Promise((resolve, reject) => {
-    db.find({ userId: VIEWER_ID }, (err, entries) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(entries.map(entry => new URLEntry(entry)));
-      }
-    });
+    db.find({ userId: VIEWER_ID })
+      .sort({ _id: -1 }) // Sort by ID desc
+      .limit(limit)
+      .exec((err, entries) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(entries.map(entry => new URLEntry(entry)));
+        }
+      });
   });
 
 export const getNumberOfURLs = (): Promise<number> =>
