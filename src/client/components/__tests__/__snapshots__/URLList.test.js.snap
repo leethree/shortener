@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`URLList renders 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.c5 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  color: blue;
+}
+
+.c8 {
+  margin: 0px;
+}
+
+.c7 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c1 {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: 0;
+  border-bottom: 1px solid;
+  border-color: gray;
+}
+
+.c11 {
+  font-size: 14px;
+  font-family: mono;
+  margin: 0px;
+  overflow: auto;
+}
+
+.c3 {
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 512px;
+  padding-right: 512px;
+}
+
+.c6 {
+  margin-bottom: 512px;
+  margin-top: 512px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c9 {
+  margin-bottom: 512px;
+  margin-top: 512px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c2 {
+  margin-top: 512px;
+  margin-bottom: 512px;
+  padding: 8px;
+  color: #555555;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 2;
+  overflow: hidden;
+}
+
+<div
+  className="c0"
+>
+  <hr
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    <div
+      className="c3 c4 c5"
+    >
+      <div
+        className="c6 c7 c8"
+        title="https://www.google.com"
+      >
+        https://www.google.com
+      </div>
+      <div
+        className="c9 c5"
+      >
+        →
+      </div>
+      <div
+        className="c9 c5"
+      >
+        <a
+          className="c10"
+          href="/test"
+          target="_blank"
+        >
+          <pre
+            className="c11"
+          >
+            /test
+          </pre>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3 c4 c5"
+    >
+      <div
+        className="c6 c7 c8"
+        title="https://www.apple.com"
+      >
+        https://www.apple.com
+      </div>
+      <div
+        className="c9 c5"
+      >
+        →
+      </div>
+      <div
+        className="c9 c5"
+      >
+        <a
+          className="c10"
+          href="/test2"
+          target="_blank"
+        >
+          <pre
+            className="c11"
+          >
+            /test2
+          </pre>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
