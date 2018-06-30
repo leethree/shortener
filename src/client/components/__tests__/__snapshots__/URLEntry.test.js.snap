@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`URLEntry renders 1`] = `
+.c3 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  color: blue;
+}
+
+.c6 {
+  margin: 0px;
+}
+
+.c5 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c9 {
+  font-size: 14px;
+  font-family: mono;
+  margin: 0px;
+  overflow: auto;
+}
+
+.c1 {
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 512px;
+  padding-right: 512px;
+}
+
+.c4 {
+  margin-bottom: 512px;
+  margin-top: 512px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.c7 {
+  margin-bottom: 512px;
+  margin-top: 512px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c0 {
+  margin-top: 512px;
+  margin-bottom: 512px;
+  padding: 8px;
+  color: #555555;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 2;
+  overflow: hidden;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 c2 c3"
+  >
+    <div
+      className="c4 c5 c6"
+      title="https://www.google.com"
+    >
+      https://www.google.com
+    </div>
+    <div
+      className="c7 c3"
+    >
+      →
+    </div>
+    <div
+      className="c7 c3"
+    >
+      <a
+        className="c8"
+        href="/test"
+        target="_blank"
+      >
+        <pre
+          className="c9"
+        >
+          /test
+        </pre>
+      </a>
+    </div>
+  </div>
+</div>
+`;
