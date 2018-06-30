@@ -13,8 +13,8 @@ type Props = {
 const URLCount = ({ viewer }: Props) => {
   const numUrls = viewer.totalCount;
   return (
-    <Box color="#888888">
-      {numUrls && numUrls <= 10 ? (
+    <Box color="darken">
+      {numUrls != null && numUrls <= 10 ? (
         <Text textAlign="right">
           <strong>{numUrls}</strong> URL{numUrls === 1 ? '' : 's'} shortened
         </Text>

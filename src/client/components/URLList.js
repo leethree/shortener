@@ -12,7 +12,7 @@ type Props = {
 };
 
 const URLList = ({ viewer }: Props) => {
-  if (!viewer.urls || !viewer.urls.edges || !viewer.urls.edges.length === 0) {
+  if (!viewer.urls || !viewer.urls.edges || viewer.urls.edges.length === 0) {
     return null;
   }
   const { edges } = viewer.urls;
