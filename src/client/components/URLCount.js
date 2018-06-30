@@ -16,7 +16,7 @@ const URLCount = ({ viewer }: Props) => {
     <Box color="darken">
       {numUrls != null && numUrls <= 10 ? (
         <Text textAlign="right">
-          <strong>{numUrls}</strong> URL{numUrls === 1 ? '' : 's'} shortened
+          <strong>{numUrls}</strong> {numUrls === 1 ? 'URL' : 'URLs'} shortened
         </Text>
       ) : (
         <Text textAlign="right">

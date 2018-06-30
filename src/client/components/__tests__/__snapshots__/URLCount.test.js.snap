@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`URLCount renders count=0 1`] = `
+.c0 {
+  box-sizing: border-box;
+  color: darken;
+}
+
+.c1 {
+  margin: 0px;
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <strong>
+      0
+    </strong>
+     
+    URLs
+     shortened
+  </div>
+</div>
+`;
+
+exports[`URLCount renders count=1 1`] = `
+.c0 {
+  box-sizing: border-box;
+  color: darken;
+}
+
+.c1 {
+  margin: 0px;
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <strong>
+      1
+    </strong>
+     
+    URL
+     shortened
+  </div>
+</div>
+`;
+
+exports[`URLCount renders count=2 1`] = `
+.c0 {
+  box-sizing: border-box;
+  color: darken;
+}
+
+.c1 {
+  margin: 0px;
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <strong>
+      2
+    </strong>
+     
+    URLs
+     shortened
+  </div>
+</div>
+`;
+
+exports[`URLCount renders count=10 1`] = `
+.c0 {
+  box-sizing: border-box;
+  color: darken;
+}
+
+.c1 {
+  margin: 0px;
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <strong>
+      10
+    </strong>
+     
+    URLs
+     shortened
+  </div>
+</div>
+`;
+
+exports[`URLCount renders count=11 1`] = `
+.c0 {
+  box-sizing: border-box;
+  color: darken;
+}
+
+.c1 {
+  margin: 0px;
+  text-align: right;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    Showing 10 of 
+    <strong>
+      11
+    </strong>
+     URLs shortened
+  </div>
+</div>
+`;
